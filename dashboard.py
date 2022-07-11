@@ -5,7 +5,7 @@ import requests
 #import io
 import json
 import numpy as np
-from tensorflow.keras.preprocessing.image import array_to_img
+from method import array_to_img
 #import tensorflow as tf
 #import matplotlib.pyplot as plt
 
