@@ -1,12 +1,12 @@
 import pandas as pd
 import streamlit as st
 import requests
-from PIL import Image
-import io
+#from PIL import Image
+#import io
 import json
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
    
     
@@ -30,20 +30,20 @@ def request_prediction(img_path):
 
     return img
     
-def just_show(img_path):
+#def just_show(img_path):
 
-    data_in = {'file': open(img_path ,'rb')}
+    #data_in = {'file': open(img_path ,'rb')}
     
-    response = requests.post('http://127.0.0.1:8000/predict', files=data_in)
+    #response = requests.post('http://127.0.0.1:8000/predict', files=data_in)
 
-    if response.status_code != 200:
-        raise Exception(
-            "Request failed with status {}, {}".format(response.status_code, response.text))
+    #if response.status_code != 200:
+        #raise Exception(
+            #"Request failed with status {}, {}".format(response.status_code, response.text))
             
-    image_bytes = io.BytesIO(response.content)
-    img = Image.open(image_bytes)
+    #image_bytes = io.BytesIO(response.content)
+    #img = Image.open(image_bytes)
 
-    return img
+    #return img
 
 
 def main():
