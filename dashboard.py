@@ -5,7 +5,8 @@ import requests
 #import io
 import json
 import numpy as np
-import tensorflow as tf
+from tensorflow import keras
+#import tensorflow as tf
 #import matplotlib.pyplot as plt
 
    
@@ -25,7 +26,7 @@ def request_prediction(img_path):
     y_pred = np.asarray(decodedArrays["array"])
     printable_pred = np.argmax(y_pred, axis=2)
     printable_pred = np.expand_dims(printable_pred, axis=-1)
-    img = tf.keras.preprocessing.image.array_to_img(printable_pred)
+    img = keras.preprocessing.image.array_to_img(printable_pred)
     
 
     return img
